@@ -1,0 +1,11 @@
+<div class="container">
+  <h1><%= @pet.name %></h1>
+
+  <p>Species: <%= @pet.species %></p>
+  <p>Found at: <%= @pet.address %>, <%= @pet.found_days_ago %> days ago</p>
+
+  <%= link_to "Back to pets", pets_path, class: 'btn btn-primary' %>
+  <%= link_to "Edit pet", edit_pet_path(@pet), class: 'btn btn-primary' %>
+  <%= link_to "Delete pet", pet_path(@pet), method: :delete, data: { confirm: "Are you sure?" } %>
+
+</div>
